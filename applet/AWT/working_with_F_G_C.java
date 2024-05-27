@@ -42,3 +42,20 @@ By leveraging fonts, colors, and graphics, you can create visually appealing and
 
 Citations:
 [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/8532474/71eacc49-3cb1-4b7b-ae36-2fd7bc5e57a9/paste.txt
+
+
+// font code using font constructors
+import java.awt.Font;
+import java.awt.FontFamily;
+
+public class FontExample {
+    public static void main(String[] args) {
+        // Create a font using the logical font name
+        Font font1 = new Font("Arial", Font.BOLD, 16);
+        System.out.println("Font 1: " + font1);
+
+        // Create a font using the font family
+        Font font2 = new Font(FontFamily.SERIF, Font.ITALIC, 14);
+        System.out.println("Font 2: " + font2);
+    }
+}
