@@ -1,23 +1,21 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
-public class EventHandlingExample {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Event Handling Example");
-        JButton button = new JButton("Click Me");
-
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Button clicked");
-            }
-        });
-
-        frame.add(button);
-        frame.setSize(200, 100);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
+//event handling
+public class bin  {
+	public static void main(String [] args){
+		JButton j1=new JButton("Button-1");
+		JFrame j2= new JFrame("this is title");
+		j1.addActionListener(new jatin());
+		j2.setSize(600,800);
+		j2.add(j1);
+		j2.setVisible(true);
+	}
+	static class jatin implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e){
+			System.err.println("button clicked!");
+	}
+}
 }
